@@ -1,0 +1,35 @@
+---
+const { color, title, subtitle, bordersubtitulo, bordersubtitulotamaño } =
+  Astro.props;
+const textColor1 = `text-${color}`;
+const textColor2 = color === "black" ? "text-gray-800" : "text-gray-100";
+const bordersubtituloColor = `border-${bordersubtitulo}`;
+---
+
+<section
+  class="landing-section flex h-screen w-screen flex-col text-center relative overflow-hidden"
+  data-header-color={color}
+>
+  <div class="z-30 relative h-full w-full flex flex-col">
+    <header>
+      <h2 class=`${textColor2} pt-40 text-[40px] font-medium`>
+        {title}
+      </h2>
+      <p>
+        <div
+          class={`text-sm ${bordersubtitulotamaño} ${bordersubtituloColor} inline-block px-1 relative`}
+        >
+          <span class={`${textColor2}`}>{subtitle}</span>
+        </div>
+      </p>
+    </header>
+    <footer class="flex flex-grow flex-col justify-end pb-24">
+      <div class="gap-x-6 flex mx-auto">
+        <slot name="bt-opciones-pagina" />
+      </div>
+    </footer>
+  </div>
+  <div class="absolute top-0 bottom-0 z-10">
+    <slot name="background" />
+  </div>
+</section>

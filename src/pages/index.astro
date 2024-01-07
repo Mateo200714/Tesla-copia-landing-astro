@@ -1,0 +1,119 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LandinHeader from "../components/LandingHeader.astro";
+import PageSection from "../components/PageSection.astro";
+import BtOpcionesPagina1 from "../components/BtOpcionesPagina1.astro";
+import BtOpcionesPagina2 from "../components/BtOpcionesPagina2.astro";
+---
+
+<Layout title="Welcome to Tesla landing.">
+  <LandinHeader />
+  <main class="relative w-full h-screen overflow-auto snap-y snap-mandatory">
+    <!--principal -->
+    <div class="snap-center">
+      <PageSection
+        title="Disfrute de Tesla"
+        subtitle="Programe una prueba de conducción hoy mismo"
+        color="white"
+        bordersubtitulo="black"
+        bordersubtitulotamaño=""
+      >
+        <video
+          slot="background"
+          class="object-center object-cover h-full w-full"
+          autoplay
+          muted
+          loop
+          src="/video.webm"></video>
+        <BtOpcionesPagina1 slot="bt-opciones-pagina">
+          <span slot="text-bt1">Prueba de conducción</span>
+        </BtOpcionesPagina1>
+      </PageSection>
+    </div>
+    <!--coches -->
+    <!--modelo s -->
+    <div class="snap-center">
+      <PageSection
+        title="Model S"
+        subtitle="Concertar una prueba de conducción"
+        color="black"
+        bordersubtitulo="gray-800"
+        bordersubtitulotamaño="border-b"
+      >
+        <BtOpcionesPagina2 slot="bt-opciones-pagina">
+          <span slot="text-bt1">Prueba de conducción</span>
+          <span slot="text-bt2">Pedido personalizado</span>
+        </BtOpcionesPagina2>
+        <img
+          slot="background"
+          class="object-center object-cover h-full w-full"
+          loading="lazy"
+          src="/model-s.avif"
+        />
+      </PageSection>
+    </div>
+    <!--modelo 3 -->
+    <div class="snap-center">
+      <PageSection
+        title="Model 3"
+        subtitle="Concertar una prueba de conducción"
+        color="black"
+        bordersubtitulo="gray-800"
+        bordersubtitulotamaño="border-b"
+      >
+        <BtOpcionesPagina2 slot="bt-opciones-pagina">
+          <span slot="text-bt1">Prueba de conducción</span>
+          <span slot="text-bt2">Pedido personalizado</span>
+        </BtOpcionesPagina2>
+        <img
+          slot="background"
+          class="object-center object-cover h-full w-full"
+          loading="lazy"
+          src="/model-3.avif"
+        />
+      </PageSection>
+    </div>
+    <!--modelo x -->
+    <div class="snap-center">
+      <PageSection
+        title="Model X"
+        subtitle="Concertar una prueba de conducción"
+        color="black"
+        bordersubtitulo="gray-800"
+        bordersubtitulotamaño="border-b"
+      >
+        <BtOpcionesPagina2 slot="bt-opciones-pagina">
+          <span slot="text-bt1">Prueba de conducción</span>
+          <span slot="text-bt2">Pedido personalizado</span>
+        </BtOpcionesPagina2>
+        <img
+          slot="background"
+          class="object-center object-cover h-full w-full"
+          loading="lazy"
+          src="/model-x.avif"
+        />
+      </PageSection>
+    </div>
+    <!--modelo y -->
+    <div class="snap-center">
+      <PageSection
+        title="Model Y"
+        subtitle="Concertar una prueba de conducción"
+        color="black"
+        bordersubtitulo="gray-800"
+        bordersubtitulotamaño="border-b"
+      >
+        <BtOpcionesPagina2 slot="bt-opciones-pagina">
+          <span slot="text-bt1">Prueba de conducción</span>
+          <span slot="text-bt2">Pedido personalizado</span>
+        </BtOpcionesPagina2>
+        <img
+          slot="background"
+          class="object-center object-cover h-full w-full"
+          loading="lazy"
+          src="/model-y.avif"
+        />
+      </PageSection>
+    </div>
+  </main>
+</Layout>
